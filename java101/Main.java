@@ -1,6 +1,6 @@
 public class Main {
 	public static void main(String[] args) {
-		int[] arr = {2, 4, 1, 5, 7, 9};
-		System.out.println(PracticeProblems.countOccurances(arr, 2));
+		int[] arr = {1, 2, 3, 4, 5};
+		System.out.println(PracticeProblems.reverseArray(arr));
 	}
 }

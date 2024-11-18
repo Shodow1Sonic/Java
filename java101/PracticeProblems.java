@@ -10,12 +10,6 @@ public class PracticeProblems {
         }
         return ncounter;
     }
-    public static void main(String[] args) {
-        int[] arr = {1,2,3,4,5};
-        int n = 2;
-        int result = countOccurances(arr, n);
-        System.out.println(result);
-    }
     
     //Problem #2
     public static int[] reverseArray(int[] arr) {
@@ -27,4 +21,6 @@ public class PracticeProblems {
         }
         return revarr;
     }
+
+    //Problem #3
 }
