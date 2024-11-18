@@ -1,6 +1,6 @@
 public class Main {
 	public static void main(String[] args) {
-		int[] arr = {1, 2, 3, 4, 5};
-		System.out.println(PracticeProblems.reverseArray(arr));
+		int n = 1294; 
+		System.out.println(PracticeProblems.fib(n));
 	}
 }
