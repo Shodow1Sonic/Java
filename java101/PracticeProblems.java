@@ -23,23 +23,12 @@ public class PracticeProblems {
     }
 
     //Problem #3
-//     public static double sumGrid(double[][] grid) {
-//    double sum = 0.0;
-//    for (int i = 0; i < grid.length; i++) {
-//        for (int j = 0; j < grid[i].length; j++) {
-//            sum += grid[i][j];
-//        }
-//    }
-//    return sum;
-//}
-//above is the original code
     public static double sumGrid(double[][] grid) {
         double sum = 0.0;
             for (double[] grid1 : grid) {
                 for (int j = 0; j < grid1.length; j++) {
                     sum += grid1[j];
                 }
-//vs code wants to be done to the code so that i dont have any errors
             }
         return sum;
     }
