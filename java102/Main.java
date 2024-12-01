@@ -1,5 +1,9 @@
 import java.util.ArrayList;
+
 public class Main {
+    public interface Shape {
+        double area();
+    }
     public static void main(String[] args) {
         Point point = new Point(4, 3);
         System.out.println("x: " + point.x + " y: " + point.y);
@@ -31,8 +35,14 @@ public class Main {
         System.out.println(intArr.size());
         System.out.println(intArr.get(32));
 
+
         Grid<Integer> grid = new Grid<>(5, 0);
         grid.set(2, 2, 4);
         System.out.println(grid);
+
+
+
     }
+    
+
 }
