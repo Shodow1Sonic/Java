@@ -1,4 +1,4 @@
-public class Square implements Shape {
+public class Square implements Main.Shape {
 	public final Point corner;
 	public final double sideLength;
 
@@ -11,10 +11,12 @@ public class Square implements Shape {
 		this.sideLength = sideLength;
 	}
 
+    @Override
 	public double area() {
 		return Math.pow(sideLength, 2);
 	}
 	
+	@Override
 	public double perimeter() {
 		return sideLength * 4;
 	}
@@ -22,6 +24,7 @@ public class Square implements Shape {
 	/** 
 	* @return Whether point p is inside of the square.
 	*/
+	@Override
 	public boolean isInside(Point p) {
 		double xDist = p.x - corner.x;
 		double yDist = p.y - corner.y;
@@ -32,6 +35,7 @@ public class Square implements Shape {
 	/** 
 	* @return Whether point p part of/on the border of the square.
 	*/
+	@Override
     public boolean isOn(Point p) {
         return (p.x == corner.x && corner.y <= p.y && p.y <= corner.y + sideLength) ||               // Left Edge
                (p.x == corner.x + sideLength && corner.y <= p.y && p.y <= corner.y + sideLength) ||  // Right Edge
@@ -44,6 +48,7 @@ public class Square implements Shape {
 	* @param y How much to translate the squarer by in the + y direction.
 	* @return The sqaure that results from the translation.
 	*/
+	@Override
 	public Square translate(double x, double y) {
 		return new Square(corner.translateX(x).translateY(y), sideLength);
 	}
@@ -51,7 +56,9 @@ public class Square implements Shape {
 	/** 
 	* @return The sqaure that results from scaling the side length and maintaining the bottom left corner
 	*/
-	public Square scale(double k) {
+
+	@Override
+	public Main.Shape scale(double k) {
 		return new Square(corner, sideLength * k);
 	}
 
